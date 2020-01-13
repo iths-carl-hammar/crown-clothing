@@ -7,7 +7,7 @@ import HomePage from './pages/homepage/homepage.component';
 import { Switch, Route, Link } from 'react-router-dom';
 
 const HatsPage = (props)=>{
-  console.log(props)
+  
   
   return(
     <div>
