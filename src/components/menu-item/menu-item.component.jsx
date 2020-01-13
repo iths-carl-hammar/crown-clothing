@@ -3,20 +3,60 @@ import React from 'react';
 import '../menu-item/menu-item.styles.scss';
 
 
-const MenuItem = ({title, imageUrl , size})=>(
+const MenuItem = ({title, imageUrl , size , linkUrl,match, history })=>(
+
     
+    <div className={`${size} menu-item`} 
+    onClick={()=> history.push(`${match.url}${linkUrl}`)}
+     >
+    <div 
+    className='background-image'
+    style={{
+        backgroundImage: `url(${imageUrl})`
+    }}
+    ></div>
+    
+    <div className='content'>
+    <h1 className='title'>{title.toUpperCase()}</h1>
+    <span className='subtitle'>shop now</span>
+    </div>
+    
+    
+    </div>
+    
+    
+    /*
     <div style={{
         backgroundImage:`url(${imageUrl})`
+        
     }}className={`${size} menu-item`}>
-        <div className='background-image' style={{backgroundImage:`url(${imageUrl})` }} ></div>
+    <div className='background-image' style={{backgroundImage:`url(${imageUrl})` }} ></div>
     <div className='content'>
-<h1 className='title'>{title.toUpperCase()}</h1>
-        <span className='subtitle'>shop now</span>
+    <h1 className='title'>{title.toUpperCase()}</h1>
+    <span className='subtitle'>shop now</span>
     </div>
-</div>
-   
-
-
-);
-
-export default MenuItem;
+    </div>
+    */
+    
+    
+    );
+    
+    export default MenuItem;
+    
+    /*
+    <div className={`${size} menu-item`} >
+    <div 
+    className='background-image'
+    style={{
+        backgroundImage: `url(${imageUrl})`
+    }}
+    ></div>
+    
+    <div className='content'>
+    <h1 className='title'>{title.toUpperCase()}</h1>
+    <span className='subtitle'>shop now</span>
+    </div>
+    
+    
+    </div>
+    */
