@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom'; // higher-Order Components
 
 import '../menu-item/menu-item.styles.scss';
 
